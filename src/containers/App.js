@@ -6,6 +6,7 @@ import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 
+
 class App extends Component {
 	constructor() {
 		super()
@@ -16,6 +17,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
+		console.log(this.props.store.getState())
 		fetch('https://jsonplaceholder.typicode.com/users')
 		.then(response=> {
 			return response.json();
@@ -56,5 +58,4 @@ class App extends Component {
 
 }
 	
-
 export default App;
